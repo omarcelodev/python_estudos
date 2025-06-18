@@ -1,5 +1,4 @@
 #Statecally Typed não se aplica em python
-
 v = 100
 print(v)
 
@@ -8,4 +7,5 @@ print(v)
 
 print(33)
 
-type(33)
+#Verificando o tipo de dado
+type(33) # <class 'int'>
