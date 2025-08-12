@@ -1,0 +1,1 @@
+print("Hello, Word!") #Imprime algo na tela
