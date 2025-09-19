@@ -1,7 +1,9 @@
-ano = input("Digite o ano que você nasceu: ")
-ano = int(ano)
+from datetime import date
 
-idade = 2025 - ano
+ano_nascimento = int(input("Digite o ano que você nasceu: "))
 
-print("Você tem", idade, "anos")
+ano_atual = date.today().year
+
+idade = ano_atual - ano_nascimento
+print(f"Você tem {idade} anos")
 

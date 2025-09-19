@@ -8,7 +8,8 @@ def calculator(num1, num2, operacao):
     elif operacao == '/':
         if num2 == 0:
             print("Não se pode dividir um número por 0!")
-        return num1 / num2
+            return None
+        return num1 / num2   
     else:
         print("Operação Inválida")
         return False
