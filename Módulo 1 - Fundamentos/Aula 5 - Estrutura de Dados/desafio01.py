@@ -2,7 +2,7 @@ agenda = {}
 
 def adicionar_contato(nome, telefone):
     agenda[nome] = telefone
-    print(f"Contato{nome} adicionado com sucesso!")
+    print(f"Contato {nome} adicionado com sucesso!")
 
 def buscar_contato(nome):
     if nome in agenda:
