@@ -12,9 +12,23 @@ def venda():
         if nome in produtos:
             quantidade = int(input("Digite a quantidade vendida: "))
 
-            produtos[nome] -= quantidade
+            if produtos[nome] == 0 or quantidade > produtos[nome]:
+                while True:
+                    print("Não há Produtos no estoque!")
+                    opcao = int(input("Deseja cadastrar uma reposição?(1)Sim (0)Não"))
 
-            print("produtos:", produtos)
+                    if opcao == 1:
+                        print("Função reposição") #Adcionar depois
+                        break
+                    elif opcao == 0:
+                        break
+                    else:
+                        print("Opção Inválida!")
+
+            else:
+                produtos[nome] -= quantidade
+                print("produtos:", produtos)
+
         else:
             while True:
                 print("Este produto não está cadastrado")
@@ -27,6 +41,17 @@ def venda():
                     break
                 else:
                     print("Opção Inválida")
+        
+        opcao = int(input("Deseja cadastrar uma nova venda? (1)Sim (0)Não: "))
+
+        if opcao == 1:
+            continue
+        elif opcao == 0:
+            break
+        else:
+            print("Opção Inválida")
+        
+
             
         
 
