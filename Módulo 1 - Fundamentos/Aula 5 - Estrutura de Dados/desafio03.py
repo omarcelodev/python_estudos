@@ -15,7 +15,7 @@ def venda():
             if produtos[nome] == 0 or quantidade > produtos[nome]:
                 while True:
                     print("Não há Produtos no estoque!")
-                    opcao = int(input("Deseja cadastrar uma reposição?(1)Sim (0)Não"))
+                    opcao = int(input("Deseja cadastrar uma reposição?(1)Sim (0)Não: "))
 
                     if opcao == 1:
                         print("Função reposição") #Adcionar depois
@@ -50,12 +50,6 @@ def venda():
             break
         else:
             print("Opção Inválida")
-        
-
-            
-        
-
-
 
 def menu():
     while True:

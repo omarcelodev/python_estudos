@@ -1,3 +1,5 @@
+# LISTAS
+
 # Criando Listas
 numeros = [1, 2, 3, 4]
 mistura = [10, "oi", 3.14, True]
@@ -16,4 +18,3 @@ numeros.remove(99) # remove valor
 
 print(len(numeros)) # tamanho da lista
 
-print(numeros)

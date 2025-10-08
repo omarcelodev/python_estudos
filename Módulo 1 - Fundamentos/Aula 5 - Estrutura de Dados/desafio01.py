@@ -17,6 +17,7 @@ def renomear(nome):
     print(agenda)
 
 def adicionar():
+
     print("===Adição de Contato===")
 
     while True:
@@ -44,15 +45,6 @@ def adicionar():
                     print("Contato cadastrado com sucesso!")
                     break
             break
-# Configurar buscar
-
-def menu_bucar():
-    print("O que deseja fazer com esse contato?")
-    print("(1) Remover")
-    print("(2) Renomear")
-    print("(3) Nada")
-    opcao = int(input("Sua opção: "))
-
 
 def buscar():
     print("===Buscar Contatos===")
@@ -62,7 +54,6 @@ def buscar():
 
         if nome in agenda:
             print("Telefone: ", agenda[nome])
-            menu_bucar()
             break
         else:
             print("Não existe nenhum contato com esse nome!")
