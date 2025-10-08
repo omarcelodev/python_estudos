@@ -6,20 +6,19 @@ def numeros():
             lista_numeros.append(numero)
     
     print(lista_numeros)
-    soma(lista_numeros)
+
+    total = soma(lista_numeros)
+
+    print("A soma dos números: ", total)
     print("O maior número: ", max(lista_numeros))
     print("O menor número: ", min(lista_numeros))
-
-   
-
+    print("A média: ", total / 10)
 
 def soma(lista_numeros):
-    soma = 0
+    soma_total = 0
     for i in lista_numeros:
-        soma += i
+        soma_total += i
     
-    print("soma dos números: ", soma)
+    return soma_total
 
-
-    
 numeros()
