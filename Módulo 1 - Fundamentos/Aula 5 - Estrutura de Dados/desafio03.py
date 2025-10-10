@@ -47,22 +47,22 @@ def reposicao():
 
             if quantidade > 1000:
                 print("Valor máximo de estoque ultrapassado")
+            elif quantidade < 1:
+                print("Valor Inválido!")
             else:
                 break
         
-        
+        limite = 1000
         produtos[nome] += quantidade
 
-        if produtos[nome] > 1000:
-            produtos[nome] = 1000
-            print(f"Capacidade máxima do estoque atingida.")
+        if produtos[nome] > limite:
+            sobra = produtos[nome] - limite
+            produtos[nome] = limite
+            print(f"Capacidade máxima do estoque atingida. {sobra} unidades não foram adicionadas.")
+        else:
+            sobra = 0
         
         print(f"Estoque atual de {nome}: {produtos[nome]} unidades.")
-
-            
-                
-
-        print(produtos[nome])
 
         if input("Deseja realizar uma nova reposição? (s/n)").lower() == 'n':
             break
