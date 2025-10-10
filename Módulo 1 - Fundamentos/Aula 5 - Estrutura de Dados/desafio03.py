@@ -34,21 +34,33 @@ def venda():
 def reposicao():
     print("\n===CADASTRO DE REPOSIÇÃO===\n")
     
-    nome = input("Informe o produto que deseja repor: ")
+    while True:
+        nome = input("Informe o produto que deseja repor: ")
+    
+        if nome not in produtos:
+            if input("Produto não cadastrado. Deseja adicionar? (s/n): ").lower() == 's':
+                print("Função para cadastrar produto") # adicionar depois
+            continue
+        
+        while True:
+            quantidade = int(input("Informe a quantidade que deseja repor: "))
 
-    if nome not in produtos:
-        if input("Produto não cadastrado. Deseja adicionar? (s/n): ").lower() == 's':
-            print("Função para cadastrar produto") # adicionar depois
-            
+            if quantidade > 1000:
+                print("Valor máximo de estoque ultrapassado")
+            else:
+                break
+        
+        while True:
+            produtos[nome] += quantidade
+            if produtos[nome] == 1000:
+                print(f"Capacidade máxima do estoque atingida. {produtos[nome]} unidades")
+                break
 
-    quantidade = int(input("Informe a quantidade que deseja repor: "))
-    estoque_atual = produtos[nome]
+        print(produtos[nome])
 
-    if estoque_atual == 1000:
-        print(f"Estoque máximo atingindo! ({estoque_atual}).")
-
-
-    produtos[nome] += quantidade
+        if input("Deseja realizar uma nova reposição? (s/n)").lower() == 'n':
+            break
+    
 
 def menu():
     while True:
