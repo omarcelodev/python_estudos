@@ -11,7 +11,7 @@ def venda():
 
         if nome not in produtos:
             if input("Produto não cadastrado. Deseja adicionar? (s/n): ").lower() == 's':
-                print("Função para cadastrar produto") #adicionar depois
+                cadastrar()
             continue
 
         quantidade = int(input("Quantidade vendida: "))
@@ -21,7 +21,7 @@ def venda():
             print(f"Estoque Insuficiente! ({estoque_atual} disponiveis).")
 
             if input("Deseja repor o estoque? (s/n): ").lower() == 's':
-                print("Função para Repor estoque") #Adicionar depois
+                reposicao()
             continue
 
         produtos[nome] -= quantidade
@@ -39,7 +39,7 @@ def reposicao():
     
         if nome not in produtos:
             if input("Produto não cadastrado. Deseja adicionar? (s/n): ").lower() == 's':
-                print("Função para cadastrar produto") # adicionar depois
+                cadastrar()
             continue
         
         while True:
@@ -69,10 +69,24 @@ def reposicao():
 
 def listagem():
     print("\n===LISTA DE ITENS E QUANTIDADE===\n")
+    print(f"{produtos}\n")
 
-    print(produtos)
-    print("\n")
+def cadastrar():
+    print("\n===CADASTRO DE PRODUTO===\n")
 
+    while True:
+        nome = input("Informe o nome do produto que deseja cadastrar: ")
+
+        if nome in produtos:
+            print("Produto já cadastrado!")
+
+        else:
+            produtos[nome] = 0
+            print("Produto cadastrado com sucesso!")
+            break
+        
+        if input("Deseja cadastrar outro produto? (s/n): ") == 'n':
+            break
 
 def menu():
     while True:
@@ -92,11 +106,10 @@ def menu():
         elif opcao == 3:
             listagem()
         elif opcao == 4:
-            print("Cadastrar")
+            cadastrar()
         elif opcao == 0:
             break
         else:
             print("Opção Inválida!")
 
-        
 menu()
