@@ -50,11 +50,17 @@ def reposicao():
             else:
                 break
         
-        while True:
-            produtos[nome] += quantidade
-            if produtos[nome] == 1000:
-                print(f"Capacidade máxima do estoque atingida. {produtos[nome]} unidades")
-                break
+        
+        produtos[nome] += quantidade
+
+        if produtos[nome] > 1000:
+            produtos[nome] = 1000
+            print(f"Capacidade máxima do estoque atingida.")
+        
+        print(f"Estoque atual de {nome}: {produtos[nome]} unidades.")
+
+            
+                
 
         print(produtos[nome])
 
