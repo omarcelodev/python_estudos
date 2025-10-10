@@ -66,7 +66,13 @@ def reposicao():
 
         if input("Deseja realizar uma nova reposição? (s/n)").lower() == 'n':
             break
-    
+
+def listagem():
+    print("\n===LISTA DE ITENS E QUANTIDADE===\n")
+
+    print(produtos)
+    print("\n")
+
 
 def menu():
     while True:
@@ -84,7 +90,9 @@ def menu():
         elif opcao == 2:
             reposicao()
         elif opcao == 3:
-            print("Listamento")
+            listagem()
+        elif opcao == 4:
+            print("Cadastrar")
         elif opcao == 0:
             break
         else:
