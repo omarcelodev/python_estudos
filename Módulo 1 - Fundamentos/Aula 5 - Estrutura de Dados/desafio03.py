@@ -33,13 +33,14 @@ def venda():
 
 def reposicao():
     print("\n===CADASTRO DE REPOSIÇÃO===\n")
-
+    
     nome = input("Informe o produto que deseja repor: ")
 
     if nome not in produtos:
         if input("Produto não cadastrado. Deseja adicionar? (s/n): ").lower() == 's':
             print("Função para cadastrar produto") # adicionar depois
-    
+            
+
     quantidade = int(input("Informe a quantidade que deseja repor: "))
     estoque_atual = produtos[nome]
 
