@@ -1,7 +1,10 @@
 produtos = {
     "Cereal": 5,
     "Arroz": 8,
-    "Café": 10
+    "Café": 10,
+    "Beterraba": 5,
+    "Refrigerante": 15,
+    "Melancia": 10
 }
 
 def venda():
