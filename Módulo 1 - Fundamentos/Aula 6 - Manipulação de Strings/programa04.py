@@ -9,7 +9,7 @@ def true_or_false(teste):
 
 texto = input("Frase: ")
 
-teste = texto.isaplha() #True se so tem letras
+teste = texto.isalpha() #True se so tem letras
 true_or_false(teste)
 
 teste = texto.isdigit() #True se so tem numeros
