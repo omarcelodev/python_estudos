@@ -2,7 +2,7 @@
 #Retorna true ou false dependendo do contéudo
 
 def true_or_false(teste):
-    if teste == True:
+    if teste:
         print("True")
     else:
         print("False")

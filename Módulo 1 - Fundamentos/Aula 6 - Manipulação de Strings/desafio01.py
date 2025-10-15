@@ -1,6 +1,6 @@
 def inversor_texto():
     while True:
-        frase_original = input("Digite uma frase: ")
+        frase_original = input("Digite uma frase: ").strip()
 
         frase_limpa = frase_original.lower()
         frase_limpa = frase_limpa.replace(" ", "")

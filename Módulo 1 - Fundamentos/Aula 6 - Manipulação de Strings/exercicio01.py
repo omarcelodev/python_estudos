@@ -4,9 +4,9 @@ def exercicio():
 
         print("A frase em maiúsculo: ", frase.upper())
         print("A frase em minúsculo: ", frase.lower())
-        print("O tamanho total da frase é: {len(frase)}.")
+        print(f"O tamanho total da frase é: {len(frase)}.")
 
-        if input("Deseja escrever outra frase? (s/n): ") == 'n':
+        if input("Deseja escrever outra frase? (s/n): ").lower() == 'n':
             break
 
 exercicio()

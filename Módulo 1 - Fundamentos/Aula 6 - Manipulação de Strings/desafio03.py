@@ -1,4 +1,4 @@
-def decodificador():
+def codificador():
     frase = input("Digite uma frase:").lower()
 
     frase_codificada = ""
@@ -12,6 +12,4 @@ def decodificador():
 
     print(frase_codificada)
 
-
-
-decodificador()
+codificador()

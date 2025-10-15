@@ -10,4 +10,4 @@ print(texto[0])
 print(texto[-1])
 print(texto[0:3])
 print(texto[2:])
-print(texto[::-1])
+print(texto[::-1]) # -> Inverte o Texto

@@ -13,9 +13,9 @@ def palavra():
         else:
             print("A palavra não termina com O!")
     
-        print(f"A letra 'E' Apareceu: {palavra_formatada.count("e")} vezes")
+        print(f"A letra 'E' Apareceu: {palavra_formatada.count('e')} vezes")
 
-        if input("Deseja escrever outra palavra? (s/n): ") == 'n':
+        if input("Deseja escrever outra palavra? (s/n): ").lower() == 'n':
             break
 
 palavra()
