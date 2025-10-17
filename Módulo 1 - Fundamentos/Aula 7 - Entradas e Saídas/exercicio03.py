@@ -1,4 +1,4 @@
-produto = input("Digite o nome do produto: ")
+produto = input("Digite o nome do produto: ").strip()
 preco = float(input("Digite o preço do produto: R$"))
 
 print(f"Produto: {produto}")

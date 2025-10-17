@@ -27,13 +27,13 @@ capitais_brasileiras = [
     "aracaju",       # Sergipe
     "palmas"         # Tocantins
 ]
-#Se idade for inválida retorna False
+#Se idade for inválida retorna True
 def verificar_idade(idade):
     if idade < 1 or idade > 100:
         print("Idade Inválida! Tente novamente.")
-        return False
-    else:
         return True
+    else:
+        return False
 
 #Se a cidade for inálida retorna True
 def verificar_cidade(cidade_formatada):
@@ -48,8 +48,10 @@ def mensagem():
     while True:
         nome = input("Digite sue nome: ").strip()
 
-        while verificar_idade(idade):
+        while True:
             idade = int(input("Digite sua idade: "))
+            if verificar_idade(idade) == False:
+                break
     
         while True:
             cidade = input("Difite o nome da sua cidade: ")

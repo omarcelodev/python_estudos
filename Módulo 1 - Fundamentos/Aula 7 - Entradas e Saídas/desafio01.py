@@ -13,7 +13,7 @@ def calculadora(opcao):
 
         print(f"{numero_1:.2f} + {numero_2:.2f} = {soma:.2f}")
     
-    if opcao == 2:
+    elif opcao == 2:
         #subtração
         numero_1 = pedir_numero()
         numero_2 = pedir_numero()
@@ -22,7 +22,7 @@ def calculadora(opcao):
 
         print(f"{numero_1:.2f} - {numero_2:.2f} = {subtracao:.2f}")
 
-    if opcao == 3:
+    elif opcao == 3:
         #multiplicação
         numero_1 = pedir_numero()
         numero_2 = pedir_numero()
@@ -31,7 +31,7 @@ def calculadora(opcao):
 
         print(f"{numero_1:.2f} * {numero_2:.2f} = {multiplicacao:.2f}")
 
-    if opcao == 4:
+    elif opcao == 4:
         #divisão
         while True:
             numero_1 = pedir_numero()
